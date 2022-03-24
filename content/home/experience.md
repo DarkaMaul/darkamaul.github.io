@@ -9,7 +9,7 @@ headless: true
 # Order that this section appears on the page.
 weight: 40
 
-title: Experience
+title: Work Experience
 subtitle:
 
 # Date format for experience
@@ -22,28 +22,38 @@ date_format: Jan 2006
 #   Leave `date_end` empty if it's your current employer.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
-  - title: CEO
-    company: GenCoin
+  - title: Security Engineer
+    company: Quarkslab
     company_url: ''
-    company_logo: org-gc
-    location: California
-    date_start: '2021-01-01'
+    company_logo: qb
+    location: Paris
+    date_start: '2019-09-01'
     date_end: ''
     description: |2-
-        Responsibilities include:
+        I am part of the Automated Analysis team where I mostly work on the following topics:
         
-        * Analysing
-        * Modelling
-        * Deploying
-        
-  - title: Professor of Semiconductor Physics
-    company: University X
+        * Detection of _1 day_ vulnerabilities in Android phones (for my PhD)
+        * Android Application Analysis
+        * Tooling development
+
+  - title: Master Internship
+    company: Anssi
     company_url: ''
-    company_logo: org-x
-    location: California
-    date_start: '2016-01-01'
-    date_end: '2020-12-31'
-    description: Taught electronic engineering and researched semiconductor physics.
+    company_logo: anssi
+    location: Paris
+    date_start: '2018-03-01'
+    date_end: '2018-08-31'
+    description: |2-
+      I worked on the identification of cryptographic code in binary code.
+
+  - title: Apprentice in Cyber Security
+    company: AXA CS
+    company_url: ''
+    company_logo: axa
+    location: Paris
+    date_start: '2015-09-01'
+    date_end: '2016-08-31'
+    description: I worked in the Cybersecurity Team on the implementation of ISO 2700X norms.
 
 design:
   columns: '2'
