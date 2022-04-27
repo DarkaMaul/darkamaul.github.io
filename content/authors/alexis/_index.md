@@ -16,7 +16,7 @@ organizations:
   url: https://www.polytechnique.edu
 
 # Short bio (displayed in user profile at end of posts)
-bio: TODO
+bio: Security Engineer and (future) Doctor in Cybersecurity
 
 # Interests to show in About widget
 interests:

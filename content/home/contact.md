@@ -15,10 +15,10 @@ content:
   - icon: keybase
     icon_pack: fab
     name: Keybase
-    link: https://keybase.io/
+    link: https://keybase.io/darkamaul
   - icon: key
     icon_pack: fab
-    name: GPG Key (TODO)
-    link: TODO
+    name: GPG Key
+    link: BA5C64AE0466B3.asc
 
 ---

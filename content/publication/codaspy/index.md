@@ -62,8 +62,8 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf:
-url_code:
+url_pdf: "https://hal.archives-ouvertes.fr/hal-03477866/document"
+url_code: "https://github.com/quarkslab/aosp_dataset"
 url_dataset: "https://github.com/quarkslab/aosp-dataset"
 url_poster:
 url_project:
