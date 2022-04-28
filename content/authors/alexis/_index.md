@@ -82,5 +82,4 @@ theories applied to binary analysis. He conducts his PhD in the GRACE team at
 the _Laboratoire d'Informatique de l'Ecole Polytechnique_ (LiX).
 
 
-
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
+{{% icon name="download" pack="fas" %}} Download my {{% staticref "uploads/challande-cv.pdf" "newtab" %}} resumé{{% /staticref %}}.
