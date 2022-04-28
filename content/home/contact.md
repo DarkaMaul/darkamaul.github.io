@@ -19,6 +19,6 @@ content:
   - icon: key
     icon_pack: fab
     name: GPG Key
-    link: BA5C64AE0466B3.asc
+    link: uploads/BA5C64AE0466B3.asc
 
 ---
