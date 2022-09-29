@@ -1,35 +1,35 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "AOSP Dataset"
-summary: "Large vulnerability dataset based on CVE affecting AOSP and precise at a commit level"
+title: "Quokka"
+summary: "Quokka is a Fast and Accurate Binary Exporter"
 authors: []
-tags: [AOSP Security CVE Dataset]
+tags: [Reverse-Engineering IDA-Plugin]
 categories: []
-date: 2022-04-27T17:14:30+01:00
+date: 2022-09-28T19:10:00+01:00
 
 # Optional external URL for project (replaces project detail page).
-external_link: "https://github.com/quarkslab/aosp_dataset"
+external_link: "https://github.com/quarkslab/quokka"
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
-# image:
-#   caption: ""
-#   focal_point: ""
-#   preview_only: false
+image:
+  caption: "Quokka's Logo"
+  focal_point: ""
+  preview_only: false
 
-# Custom links (optional).
-#   Uncomment and edit lines below to show custom links.
 links:
+- name: Documentation
+  url: https://quarkslab.github.io/quokka/
+  icon_pack: fas
+  icon: book
 - name: Blogpost
-  url: https://blog.quarkslab.com/commit-level-vulnerability-dataset.html
+  url: https://blog.quarkslab.com/quokka-a-fast-and-accurate-binary-exporter.html
   icon_pack: fas
   icon: blog
 
-
-
-url_code: "https://github.com/quarkslab/aosp_dataset"
+url_code: "https://github.com/quarkslab/bgraph"
 url_pdf: ""
 url_slides: ""
 url_video: ""
