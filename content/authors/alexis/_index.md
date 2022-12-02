@@ -85,4 +85,4 @@ GRACE team at the _Laboratoire d'Informatique de l'Ecole Polytechnique_ (LiX).
 
 {{% icon name="download" pack="fas" %}} Download my {{% staticref
 "uploads/challande-cv.pdf" "newtab" %}} resumé{{% /staticref %}} (last updated
-in September 2022).
+in December 2022).
