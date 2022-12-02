@@ -16,7 +16,7 @@ organizations:
   url: https://www.polytechnique.edu
 
 # Short bio (displayed in user profile at end of posts)
-bio: Security Engineer and (future) Doctor in Cybersecurity
+bio: Security Engineer and Doctor in Cybersecurity
 
 # Interests to show in About widget
 interests:
@@ -27,7 +27,7 @@ interests:
 # Education to show in About widget
 education:
   courses:
-  - course: (in progress) PhD in Binary Analysis
+  - course: PhD in Binary Analysis
     institution: Ecole Polytechnique
     year: 2022
   - course: Master in Digital Security
@@ -75,11 +75,14 @@ email: "alexis@challande.eu"
 highlight_name: true
 ---
 
-Alexis Challande is currently a PhD student at Quarkslab, a French middle-size
-security company. His research interests include _1 day_ detection applied to
-embedded systems, AOSP usage through with a security mindset and usage of graph
-theories applied to binary analysis. He conducts his PhD in the GRACE team at
-the _Laboratoire d'Informatique de l'Ecole Polytechnique_ (LiX).
+Alexis Challande obtained his PhD at Quarkslab in October 2022, a French
+middle-size security company. His research interests include _1 day_ detection
+applied to embedded systems, AOSP usage through with a security mindset and
+usage of graph theories applied to binary analysis. His PhD was conducted in the
+GRACE team at the _Laboratoire d'Informatique de l'Ecole Polytechnique_ (LiX).
 
+**Warning:** Alexis will be out for a sabbatical starting in December 2022.
 
-{{% icon name="download" pack="fas" %}} Download my {{% staticref "uploads/challande-cv.pdf" "newtab" %}} resumé{{% /staticref %}}.
+{{% icon name="download" pack="fas" %}} Download my {{% staticref
+"uploads/challande-cv.pdf" "newtab" %}} resumé{{% /staticref %}} (last updated
+in September 2022).

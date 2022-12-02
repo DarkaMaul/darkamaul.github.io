@@ -28,13 +28,14 @@ experience:
     company_logo: qb
     location: Paris
     date_start: '2019-09-01'
-    date_end: ''
+    date_end: '2022-12-02'
     description: |2-
         I am part of the Automated Analysis team where I mostly work on the following topics:
         
         * Detection of _1 day_ vulnerabilities in Android phones (for my PhD)
         * Android Application Analysis
         * Tooling development
+        * IDA Plugin development
 
   - title: Master Internship
     company: Anssi
