@@ -93,6 +93,40 @@ params:
         - "Vulnerability Detection"
         - "Graph Theory"
 
+  experience:
+    enable: true
+    title: "Work Experience"
+    items:
+      - company: "Quarkslab"
+        companyUrl: "https://www.quarkslab.com/"
+        jobs:
+          - name: "Security Engineer"
+            date: "Sep 2019 - Dec 2022"
+            content: |-
+              Part of the Automated Analysis team, working on:
+
+              - Detection of 1-day vulnerabilities in Android phones (PhD research)
+              - Android Application Analysis
+              - Tooling development
+              - IDA Plugin development
+
+      - company: "ANSSI"
+        companyUrl: "https://www.ssi.gouv.fr/"
+        jobs:
+          - name: "Master Internship"
+            date: "Mar 2018 - Aug 2018"
+            content: |-
+              Worked on the identification of cryptographic code
+              in binary code.
+
+      - company: "AXA CS"
+        jobs:
+          - name: "Apprentice in Cybersecurity"
+            date: "Sep 2015 - Aug 2016"
+            content: |-
+              Worked in the Cybersecurity Team on the implementation
+              of ISO 2700X norms.
+
   contact:
     enable: true
     content: >-
