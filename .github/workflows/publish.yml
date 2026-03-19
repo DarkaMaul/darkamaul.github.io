@@ -1,56 +1,64 @@
-# Workflow to build and deploy site to Github Pages using Hugo
-# From https://zendesk.engineering/a-github-actions-workflow-to-generate-publish-your-hugo-website-f36375e56cf7
+name: Deploy Hugo site to GitHub Pages
 
-# Name of Workflow
-name: GitHub Pages
-
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [master]
+  workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
-  # This workflow contains a single job called "deploy"
-  deploy:
-    # The type of runner that the job will run on
+  build:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    env:
+      HUGO_VERSION: "0.157.0"
     steps:
+      - name: Install Hugo CLI
+        run: |
+          wget -O "${{ runner.temp }}/hugo.deb" \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+          sudo dpkg -i "${{ runner.temp }}/hugo.deb"
 
-    # Step 1 - Checks-out your repository under $GITHUB_WORKSPACE
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-          submodules: true  # Fetch Hugo themes
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
 
-    # Step 2 - Sets up the latest version of Hugo
-    - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v2
-      with:
-          hugo-version: '0.95.0'
-          extended: true
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@f156874f8191504dae5b037505266ed5dda6c382 # v5
 
-    # Step 3 - Clean and don't fail
-    - name: Clean public directory
-      run: rm -rf public
+      - name: Setup Go
+        uses: actions/setup-go@d35c59abb061a4a6fb18e82ac0862c26744d6ab5 # v5.5.0
+        with:
+          go-version: 'stable'
 
-    # Step 4 - Builds the site using the latest version of Hugo
-    # Also specifies the theme we want to use
-    - name: Build
-      run: hugo --minify --gc
+      - name: Build with Hugo
+        env:
+          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
+          HUGO_ENVIRONMENT: production
+          TZ: Europe/Paris
+        run: hugo --minify --gc --baseURL "${{ steps.pages.outputs.base_url }}/"
 
-    # # Step 5 - Create name file
-    # - name: Create cname file
-    #   run: echo 'freshswift.net' > public/CNAME
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@a753861a5debcf57bf8b404356158c8e1e33150c # v3
+        with:
+          path: ./public
 
-    # Step 6 - Push our generated site to our gh-pages branch
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          commit_message: ${{ github.event.head_commit.message }}
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@9dbe3824824f8a1377b8e298bafde1a50ede43e5 # v4
