@@ -1,0 +1,44 @@
+baseURL: "https://darkamaul.github.io"
+languageCode: "en-us"
+title: "Alexis Challande"
+
+module:
+  imports:
+    - path: github.com/gurusabarish/hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+
+enableRobotsTXT: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  title: "Alexis Challande"
+  description: "Security Engineer - Personal Website"
+  animate: true
+  useBootstrapCDN: false
+
+  theme:
+    defaultTheme: "light"
+
+  navbar:
+    align: ms-auto
+    brandName: "Alexis Challande"
+    disableSearch: true
+    stickyNavBar:
+      enable: true
+      showOnScrollUp: true
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: true
+      disableContact: false
