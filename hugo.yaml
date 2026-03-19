@@ -42,3 +42,66 @@ params:
       disableProjects: false
       disableAchievements: true
       disableContact: false
+
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Alexis."
+    subtitle: "Security Engineer"
+    content: >-
+      Security Engineer and Doctor in Cybersecurity.
+      Interested in binary analysis, reverse engineering,
+      and Android security.
+    image: /images/avatar.jpg
+    bottomImage:
+      enable: false
+    button:
+      enable: true
+      name: "Resume"
+      url: /uploads/challande-cv.pdf
+      download: true
+      newPage: true
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/DarkaMaul
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/alexis-challande/
+        - icon: fab fa-x-twitter
+          url: https://twitter.com/DarkaMaul
+        - icon: fas fa-graduation-cap
+          url: https://scholar.google.fr/citations?user=FbVm3psAAAAJ
+
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/avatar.jpg"
+    content: |-
+      Alexis Challande obtained his PhD at Quarkslab in October 2022.
+      His research interests include 1-day detection applied to embedded
+      systems, AOSP security, and graph theories applied to binary analysis.
+      His PhD was conducted in the GRACE team at the Laboratoire
+      d'Informatique de l'Ecole Polytechnique (LiX).
+    skills:
+      enable: true
+      title: "Areas of expertise:"
+      items:
+        - "Binary Analysis"
+        - "Reverse Engineering"
+        - "Android Security"
+        - "IDA Scripting"
+        - "Vulnerability Detection"
+        - "Graph Theory"
+
+  contact:
+    enable: true
+    content: >-
+      Feel free to reach out if you have questions or just want to say hi.
+    btnName: Mail me
+    btnLink: mailto:alexis@challande.eu
+
+  footer:
+    socialNetworks:
+      github: https://github.com/DarkaMaul
+      linkedin: https://www.linkedin.com/in/alexis-challande/
+      twitter: https://twitter.com/DarkaMaul
