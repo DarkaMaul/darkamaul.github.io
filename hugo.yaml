@@ -127,6 +127,58 @@ params:
               Worked in the Cybersecurity Team on the implementation
               of ISO 2700X norms.
 
+  education:
+    enable: true
+    items:
+      - title: "PhD in Binary Analysis"
+        school:
+          name: "Ecole Polytechnique"
+          url: "https://www.polytechnique.edu"
+        date: "2019 - 2022"
+      - title: "Master in Digital Security"
+        school:
+          name: "Eurecom"
+          url: "https://www.eurecom.fr"
+        date: "2016 - 2018"
+      - title: "BSc in Computer Science"
+        school:
+          name: "University Pierre & Marie Curie"
+          url: "https://www.sorbonne-universite.fr"
+        date: "2012 - 2015"
+
+  projects:
+    enable: true
+    items:
+      - title: Quokka
+        content: >-
+          A Fast and Accurate Binary Exporter.
+        image: /images/projects/quokka.png
+        badges:
+          - "Reverse Engineering"
+          - "IDA Plugin"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/quarkslab/quokka
+          - icon: fas fa-book
+            url: https://quarkslab.github.io/quokka/
+
+      - title: BGraph
+        content: >-
+          A tool for binary analysis using graph theory.
+        badges:
+          - "Binary Analysis"
+          - "Graph Theory"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/quarkslab/bgraph
+
+      - title: AOSP Dataset
+        content: >-
+          Dataset for Android Open Source Project analysis.
+        badges:
+          - "Android"
+          - "Security"
+
   contact:
     enable: true
     content: >-
