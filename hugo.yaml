@@ -22,6 +22,7 @@ markup:
 params:
   title: "Alexis Challande"
   description: "Security Engineer - Personal Website"
+  favicon: "/fav.png"
   animate: true
   useBootstrapCDN: false
 
@@ -69,13 +70,14 @@ params:
           url: https://www.linkedin.com/in/alexis-challande/
         - icon: fab fa-x-twitter
           url: https://twitter.com/DarkaMaul
+        - icon: fab fa-bluesky
+          url: https://bsky.app/profile/darkamaul.bsky.social
         - icon: fas fa-graduation-cap
           url: https://scholar.google.fr/citations?user=FbVm3psAAAAJ
 
   about:
     enable: true
     title: "About Me"
-    image: "/images/avatar.jpg"
     content: |-
       Alexis Challande obtained his PhD at Quarkslab in October 2022.
       His research interests include 1-day detection applied to embedded
@@ -120,6 +122,7 @@ params:
               in binary code.
 
       - company: "AXA CS"
+        companyUrl: "https://www.axa.com/"
         jobs:
           - name: "Apprentice in Cybersecurity"
             date: "Sep 2015 - Aug 2016"
@@ -165,6 +168,7 @@ params:
       - title: BGraph
         content: >-
           A tool for binary analysis using graph theory.
+        image: ""
         badges:
           - "Binary Analysis"
           - "Graph Theory"
@@ -175,6 +179,7 @@ params:
       - title: AOSP Dataset
         content: >-
           Dataset for Android Open Source Project analysis.
+        image: ""
         badges:
           - "Android"
           - "Security"

@@ -107,7 +107,7 @@
 .timeline-body {
   margin-top: 0.5rem;
   font-size: 0.9rem;
-  color: var(--bs-body-color, #212529);
+  color: var(--bs-body-color);
   line-height: 1.6;
 }
 
@@ -122,6 +122,56 @@
 
 .timeline-body li {
   margin-bottom: 0.15rem;
+}
+
+/* Project card images */
+.card-img-top {
+  object-fit: contain;
+  max-height: 80px;
+  padding: 0.5rem 0.5rem 0;
+}
+
+.card-img-top[src=""] {
+  display: none;
+}
+
+/* Plain timeline content (transparent background, keep border) */
+.timeline-content-plain {
+  background: transparent;
+}
+
+body.dark .timeline-content-plain {
+  background: transparent;
+}
+
+/* Dark mode overrides for timeline */
+body.dark .timeline-content {
+  background: var(--secondary-background-color-dark, #212529);
+  border-color: #495057;
+  color: var(--text-color-dark, #e4e6eb);
+}
+
+body.dark .timeline-body,
+body.dark .timeline-body p,
+body.dark .timeline-body li {
+  color: var(--text-color-dark, #e4e6eb);
+}
+
+body.dark .timeline-title {
+  color: var(--text-color-dark, #e4e6eb);
+}
+
+body.dark .timeline-company,
+body.dark .timeline-content h5 {
+  color: var(--text-secondary-color-dark, #b0b3b8);
+}
+
+body.dark .timeline-date {
+  color: var(--text-secondary-color-dark, #b0b3b8);
+}
+
+body.dark .timeline-dot {
+  background: var(--background-color-dark, #18191a);
 }
 
 /* Responsive: stack date below header on small screens */
