@@ -19,6 +19,15 @@ markup:
     renderer:
       unsafe: true
 
+menus:
+  main:
+    - name: "Talks & Publications"
+      url: "/#publications"
+      weight: 60
+    - name: "Disclosures"
+      url: "/#disclosures"
+      weight: 70
+
 params:
   title: "Alexis Challande"
   description: "Security Engineer - Personal Website"
@@ -86,6 +95,8 @@ params:
       core components of the sigstore timestamping infrastructure. I am also
       interested in using static analysis methods (e.g. CodeQL) to find
       security problems in the software supply chain and remediate them.
+
+      <small class="text-muted">Based in Paris, France.</small>
     skills:
       enable: true
       title: "Areas of expertise:"
@@ -109,9 +120,9 @@ params:
               - Designed and built the RFC3161 timestamping client that
                 powers package attestations across the Python packaging
                 ecosystem (PyPI, sigstore-python, pyca/cryptography).
-              - Drove PEP 740 adoption in PyPI: attestation storage,
-                trusted publishing hardening, and publisher verification
-                for GitHub and GitLab.
+              - Contributed to PEP 740 adoption in PyPI: attestation
+                storage, trusted publishing hardening, and publisher
+                verification for GitHub and GitLab.
               - Discovered 7 CVEs in widely-used projects (Elasticsearch,
                 Google Protobuf, XStream, Wire) through systematic
                 analysis of recursion-based DoS patterns. Presented
@@ -216,7 +227,7 @@ params:
 
   achievements:
     enable: true
-    title: "Publications"
+    title: "Writing"
     items:
       - title: "Making PyPI's test suite 81% faster"
         content: "Trail of Bits Blog, 2025"
@@ -224,18 +235,23 @@ params:
       - title: "Don't recurse on untrusted input"
         content: "Trail of Bits Blog, 2025"
         url: "https://blog.trailofbits.com/2025/02/21/dont-recurse-on-untrusted-input/"
+      - title: "An Experimental Study of Different Binary Exporters"
+        content: "Quarkslab Blog, 2019"
+        url: "https://blog.quarkslab.com/an-experimental-study-of-different-binary-exporters.html"
+
+  publications:
+    enable: true
+    title: "Talks & Publications"
+    items:
       - title: "Low-Effort Denial of Service with Recursion"
         content: "DistrictCon, Washington DC, 2025"
         url: "https://www.districtcon.org/bios-and-talks-2025/low-effort-dos-with-recursion"
       - title: "Quokka: A Fast and Accurate Binary Exporter"
-        content: "Quarkslab Blog, 2022 / GreHack, Grenoble, 2022"
+        content: "GreHack, Grenoble, 2022"
         url: "https://blog.quarkslab.com/quokka-a-fast-and-accurate-binary-exporter.html"
       - title: "Commit Level Vulnerability Dataset"
-        content: "Quarkslab Blog, 2022 / CODASPY, Baltimore, 2022"
+        content: "CODASPY, Baltimore, 2022"
         url: "https://blog.quarkslab.com/commit-level-vulnerability-dataset.html"
-      - title: "An Experimental Study of Different Binary Exporters"
-        content: "Quarkslab Blog, 2019"
-        url: "https://blog.quarkslab.com/an-experimental-study-of-different-binary-exporters.html"
       - title: "Towards 1-day Vulnerability Detection using Semantic Patch Signatures"
         content: 'PhD Thesis, École Polytechnique, 2022 — <a href="https://theses.hal.science/tel-03950382" target="_blank">Manuscript</a> · <a href="/uploads/thesis-slides.pdf" target="_blank">Slides</a>'
       - title: "Exploitation du graphe de dépendance d'AOSP"
