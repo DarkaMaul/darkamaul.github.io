@@ -88,13 +88,27 @@
 }
 
 .timeline-company a {
-  color: var(--bs-primary, #007bff);
+  display: inline-block;
+  color: var(--text-link-color) !important;
   text-decoration: none;
   font-weight: 500;
 }
 
-.timeline-company a:hover {
-  text-decoration: underline;
+.timeline-company a::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 2px;
+  bottom: 0.37em;
+  background-color: var(--primary-color);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  opacity: 0.5;
+}
+
+.timeline-company a:hover::after,
+.timeline-company a:focus::after,
+.timeline-company a:active::after {
+  width: 100%;
 }
 
 .timeline-date {
@@ -122,6 +136,80 @@
 
 .timeline-body li {
   margin-bottom: 0.15rem;
+}
+
+/* Uniform link styling — match theme's animated underline pattern */
+#achievements a.card,
+#publications a.card {
+  display: block;
+  text-decoration: none;
+  color: var(--text-link-color) !important;
+}
+
+#achievements a.card .card-title,
+#publications a.card .card-title {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text-link-color) !important;
+}
+
+#achievements a.card .card-title::after,
+#publications a.card .card-title::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 2px;
+  bottom: 0.37em;
+  background-color: var(--primary-color);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  opacity: 0.5;
+}
+
+#achievements a.card:hover .card-title::after,
+#achievements a.card:focus .card-title::after,
+#publications a.card:hover .card-title::after,
+#publications a.card:focus .card-title::after {
+  width: 100%;
+}
+
+#achievements a.card .card-text,
+#publications a.card .card-text {
+  color: var(--text-color) !important;
+  opacity: 0.9;
+}
+
+/* Inline links inside card text (e.g. Manuscript · Slides) */
+#achievements .card-text a,
+#publications .card-text a {
+  display: inline-block;
+  color: var(--text-link-color) !important;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#achievements .card-text a::after,
+#publications .card-text a::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 2px;
+  bottom: 0.37em;
+  background-color: var(--primary-color);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  opacity: 0.5;
+}
+
+#achievements .card-text a:hover::after,
+#achievements .card-text a:focus::after,
+#publications .card-text a:hover::after,
+#publications .card-text a:focus::after {
+  width: 100%;
+}
+
+/* Match card border-radius across all sections */
+#publications .card,
+#disclosures .card {
+  border-radius: 1rem;
 }
 
 /* Project card images */
