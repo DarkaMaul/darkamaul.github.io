@@ -140,15 +140,84 @@
   background: transparent;
 }
 
-body.dark .timeline-content-plain {
-  background: transparent;
+/* ============================================
+   Dark mode fixes
+   The theme's .dark class sets CSS variables
+   but doesn't apply them to backgrounds/text.
+   ============================================ */
+
+/* Core: body and html backgrounds + text color */
+body.dark {
+  background-color: var(--background-color-dark, #18191a) !important;
+  color: var(--text-color-dark, #e4e6eb) !important;
 }
 
-/* Dark mode overrides for timeline */
+body.dark > * {
+  background-color: var(--background-color-dark, #18191a) !important;
+  color: var(--text-color-dark, #e4e6eb) !important;
+}
+
+/* Navbar */
+body.dark .navbar {
+  background-color: var(--background-color-dark, #18191a) !important;
+}
+
+body.dark .navbar .nav-link,
+body.dark .navbar .navbar-brand {
+  color: var(--text-color-dark, #e4e6eb) !important;
+}
+
+/* Hero section */
+body.dark #hero h1 {
+  color: var(--primary-color-dark, #ffffff) !important;
+}
+
+body.dark #hero h2,
+body.dark #hero .subtitle {
+  color: var(--text-secondary-color-dark, #b0b3b8) !important;
+}
+
+body.dark .social-icon {
+  color: var(--text-color-dark, #e4e6eb) !important;
+  border-color: var(--text-secondary-color-dark, #b0b3b8) !important;
+}
+
+body.dark .social-icon:hover {
+  background-color: var(--secondary-color-dark, #212529) !important;
+}
+
+body.dark .social-icon img {
+  filter: brightness(0) invert(1);
+}
+
+/* Hero resume button */
+body.dark #hero .btn {
+  color: var(--text-color-dark, #e4e6eb) !important;
+  border-color: var(--text-secondary-color-dark, #b0b3b8) !important;
+}
+
+/* Section headings */
+body.dark h3,
+body.dark h2 {
+  color: var(--text-color-dark, #e4e6eb) !important;
+}
+
+/* About section */
+body.dark #about p,
+body.dark #about li,
+body.dark #about .text-secondary {
+  color: var(--text-secondary-color-dark, #b0b3b8) !important;
+}
+
+/* Timeline */
 body.dark .timeline-content {
   background: var(--secondary-background-color-dark, #212529);
   border-color: #495057;
   color: var(--text-color-dark, #e4e6eb);
+}
+
+body.dark .timeline-content-plain {
+  background: transparent;
 }
 
 body.dark .timeline-body,
@@ -172,6 +241,57 @@ body.dark .timeline-date {
 
 body.dark .timeline-dot {
   background: var(--background-color-dark, #18191a);
+}
+
+/* Bootstrap cards (education, projects) */
+body.dark .card {
+  background: var(--secondary-background-color-dark, #212529) !important;
+  border-color: #495057;
+  color: var(--text-color-dark, #e4e6eb) !important;
+}
+
+body.dark .card .card-body,
+body.dark .card .card-title,
+body.dark .card .card-text,
+body.dark .card small {
+  color: var(--text-color-dark, #e4e6eb) !important;
+}
+
+body.dark .card a h6 {
+  color: var(--text-link-color-dark, #ffffff) !important;
+}
+
+/* Contact section */
+body.dark #contact .btn {
+  color: var(--text-color-dark, #e4e6eb) !important;
+  border-color: var(--text-secondary-color-dark, #b0b3b8) !important;
+}
+
+body.dark #contact p {
+  color: var(--text-secondary-color-dark, #b0b3b8) !important;
+}
+
+/* Footer */
+body.dark footer {
+  background-color: var(--background-color-dark, #18191a) !important;
+  color: var(--text-color-dark, #e4e6eb) !important;
+}
+
+body.dark footer p,
+body.dark footer a,
+body.dark footer span {
+  color: var(--text-secondary-color-dark, #b0b3b8) !important;
+}
+
+/* Badge styling in dark mode */
+body.dark .badge {
+  background-color: #495057 !important;
+  color: var(--text-color-dark, #e4e6eb) !important;
+}
+
+/* Links in dark mode */
+body.dark a:not(.btn):not(.social-icon):not(.nav-link) {
+  color: var(--text-link-color-dark, #ffffff);
 }
 
 /* Responsive: stack date below header on small screens */

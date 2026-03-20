@@ -68,12 +68,11 @@ params:
           url: https://github.com/DarkaMaul
         - icon: fab fa-linkedin
           url: https://www.linkedin.com/in/alexis-challande/
-        - icon: fab fa-x-twitter
-          url: https://twitter.com/DarkaMaul
-        - icon: fab fa-bluesky
-          url: https://bsky.app/profile/darkamaul.bsky.social
         - icon: fas fa-graduation-cap
           url: https://scholar.google.fr/citations?user=FbVm3psAAAAJ
+      customIcons:
+        - icon: /images/bluesky.svg
+          url: https://bsky.app/profile/darkamaul.bsky.social
 
   about:
     enable: true
@@ -195,4 +194,4 @@ params:
     socialNetworks:
       github: https://github.com/DarkaMaul
       linkedin: https://www.linkedin.com/in/alexis-challande/
-      twitter: https://twitter.com/DarkaMaul
+      bluesky: https://bsky.app/profile/darkamaul.bsky.social
