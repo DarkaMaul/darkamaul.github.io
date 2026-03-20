@@ -1,0 +1,303 @@
+/* Vertical Timeline */
+.timeline {
+  position: relative;
+  padding: 0;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 1.25rem;
+  padding-bottom: 1.75rem;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-marker {
+  flex-shrink: 0;
+  width: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Line segment above the dot */
+.timeline-marker::before {
+  content: '';
+  width: 2px;
+  flex: 1;
+  background: var(--bs-primary, #007bff);
+}
+
+/* Line segment below the dot */
+.timeline-marker::after {
+  content: '';
+  width: 2px;
+  flex: 1;
+  background: var(--bs-primary, #007bff);
+}
+
+/* Hide line above first dot */
+.timeline-item:first-child .timeline-marker::before {
+  background: transparent;
+}
+
+/* Hide line below last dot */
+.timeline-item:last-child .timeline-marker::after {
+  background: transparent;
+}
+
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--bs-body-bg, #fff);
+  border: 3px solid var(--bs-primary, #007bff);
+  box-shadow: 0 0 0 3px
+    color-mix(in srgb, var(--bs-primary, #007bff) 15%, transparent);
+}
+
+.timeline-content {
+  flex: 1;
+  background: var(--bs-tertiary-bg, #f8f9fa);
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--bs-border-color, #dee2e6);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.timeline-company {
+  font-size: 0.9rem;
+  color: var(--bs-secondary-color, #6c757d);
+}
+
+.timeline-company a {
+  color: var(--bs-primary, #007bff);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.timeline-company a:hover {
+  text-decoration: underline;
+}
+
+.timeline-date {
+  font-size: 0.8rem;
+  color: var(--bs-secondary-color, #6c757d);
+  white-space: nowrap;
+  padding-top: 2px;
+}
+
+.timeline-body {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--bs-body-color);
+  line-height: 1.6;
+}
+
+.timeline-body p {
+  margin-bottom: 0.25rem;
+}
+
+.timeline-body ul {
+  padding-left: 1.2rem;
+  margin-bottom: 0;
+}
+
+.timeline-body li {
+  margin-bottom: 0.15rem;
+}
+
+/* Project card images */
+.card-img-top {
+  object-fit: contain;
+  max-height: 80px;
+  padding: 0.5rem 0.5rem 0;
+}
+
+.card-img-top[src=""] {
+  display: none;
+}
+
+/* Plain timeline content (transparent background, keep border) */
+.timeline-content-plain {
+  background: transparent;
+}
+
+/* ============================================
+   Dark mode fixes
+   The theme's .dark class sets CSS variables
+   but doesn't apply them to backgrounds/text.
+   ============================================ */
+
+/* Core: body and html backgrounds + text color */
+body.dark {
+  background-color: var(--background-color-dark, #18191a) !important;
+  color: var(--text-color-dark, #e4e6eb) !important;
+}
+
+body.dark > * {
+  background-color: var(--background-color-dark, #18191a) !important;
+  color: var(--text-color-dark, #e4e6eb) !important;
+}
+
+/* Navbar */
+body.dark .navbar {
+  background-color: var(--background-color-dark, #18191a) !important;
+}
+
+body.dark .navbar .nav-link,
+body.dark .navbar .navbar-brand {
+  color: var(--text-color-dark, #e4e6eb) !important;
+}
+
+/* Hero section */
+body.dark #hero h1 {
+  color: var(--primary-color-dark, #ffffff) !important;
+}
+
+body.dark #hero h2,
+body.dark #hero .subtitle {
+  color: var(--text-secondary-color-dark, #b0b3b8) !important;
+}
+
+body.dark .social-icon {
+  color: var(--text-color-dark, #e4e6eb) !important;
+  border-color: var(--text-secondary-color-dark, #b0b3b8) !important;
+}
+
+body.dark .social-icon:hover {
+  background-color: var(--secondary-color-dark, #212529) !important;
+}
+
+body.dark .social-icon img {
+  filter: brightness(0) invert(1);
+}
+
+/* Hero resume button */
+body.dark #hero .btn {
+  color: var(--text-color-dark, #e4e6eb) !important;
+  border-color: var(--text-secondary-color-dark, #b0b3b8) !important;
+}
+
+/* Section headings */
+body.dark h3,
+body.dark h2 {
+  color: var(--text-color-dark, #e4e6eb) !important;
+}
+
+/* About section */
+body.dark #about p,
+body.dark #about li,
+body.dark #about .text-secondary {
+  color: var(--text-secondary-color-dark, #b0b3b8) !important;
+}
+
+/* Timeline */
+body.dark .timeline-content {
+  background: var(--secondary-background-color-dark, #212529);
+  border-color: #495057;
+  color: var(--text-color-dark, #e4e6eb);
+}
+
+body.dark .timeline-content-plain {
+  background: transparent;
+}
+
+body.dark .timeline-body,
+body.dark .timeline-body p,
+body.dark .timeline-body li {
+  color: var(--text-color-dark, #e4e6eb);
+}
+
+body.dark .timeline-title {
+  color: var(--text-color-dark, #e4e6eb);
+}
+
+body.dark .timeline-company,
+body.dark .timeline-content h5 {
+  color: var(--text-secondary-color-dark, #b0b3b8);
+}
+
+body.dark .timeline-date {
+  color: var(--text-secondary-color-dark, #b0b3b8);
+}
+
+body.dark .timeline-dot {
+  background: var(--background-color-dark, #18191a);
+}
+
+/* Bootstrap cards (education, projects) */
+body.dark .card {
+  background: var(--secondary-background-color-dark, #212529) !important;
+  border-color: #495057;
+  color: var(--text-color-dark, #e4e6eb) !important;
+}
+
+body.dark .card .card-body,
+body.dark .card .card-title,
+body.dark .card .card-text,
+body.dark .card small {
+  color: var(--text-color-dark, #e4e6eb) !important;
+}
+
+body.dark .card a h6 {
+  color: var(--text-link-color-dark, #ffffff) !important;
+}
+
+/* Contact section */
+body.dark #contact .btn {
+  color: var(--text-color-dark, #e4e6eb) !important;
+  border-color: var(--text-secondary-color-dark, #b0b3b8) !important;
+}
+
+body.dark #contact p {
+  color: var(--text-secondary-color-dark, #b0b3b8) !important;
+}
+
+/* Footer */
+body.dark footer {
+  background-color: var(--background-color-dark, #18191a) !important;
+  color: var(--text-color-dark, #e4e6eb) !important;
+}
+
+body.dark footer p,
+body.dark footer a,
+body.dark footer span {
+  color: var(--text-secondary-color-dark, #b0b3b8) !important;
+}
+
+/* Badge styling in dark mode */
+body.dark .badge {
+  background-color: #495057 !important;
+  color: var(--text-color-dark, #e4e6eb) !important;
+}
+
+/* Links in dark mode */
+body.dark a:not(.btn):not(.social-icon):not(.nav-link) {
+  color: var(--text-link-color-dark, #ffffff);
+}
+
+/* Responsive: stack date below header on small screens */
+@media (max-width: 576px) {
+  .timeline-header {
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+}

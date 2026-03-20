@@ -1,0 +1,275 @@
+baseURL: "https://darkamaul.github.io"
+languageCode: "en-us"
+title: "Alexis Challande"
+
+module:
+  imports:
+    - path: github.com/gurusabarish/hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+
+enableRobotsTXT: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  title: "Alexis Challande"
+  description: "Security Engineer - Personal Website"
+  favicon: "/fav.png"
+  animate: true
+  useBootstrapCDN: false
+
+  theme:
+    defaultTheme: "light"
+
+  navbar:
+    align: ms-auto
+    brandName: "Alexis Challande"
+    disableSearch: true
+    stickyNavBar:
+      enable: true
+      showOnScrollUp: true
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
+
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Alexis."
+    subtitle: "Security Engineer"
+    content: >-
+      Security Engineer and Doctor in Cybersecurity.
+      Interested in supply chain security, vulnerability detection,
+      and static analysis.
+    image: /images/avatar.jpg
+    bottomImage:
+      enable: false
+    button:
+      enable: true
+      name: "Resume"
+      url: /uploads/challande-cv.pdf
+      download: true
+      newPage: true
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/DarkaMaul
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/alexis-challande/
+        - icon: fas fa-graduation-cap
+          url: https://scholar.google.fr/citations?user=FbVm3psAAAAJ
+      customIcons:
+        - icon: /images/bluesky.svg
+          url: https://bsky.app/profile/darkamaul.bsky.social
+
+  about:
+    enable: true
+    title: "About Me"
+    content: |-
+      After completing a PhD in Computer Science at École Polytechnique
+      focused on vulnerability detection using semantic patch signatures in
+      closed-source binaries, I joined Trail of Bits to focus on security
+      engineering for ecosystems. I have been part of the larger initiative
+      to add package attestations to the Python Package Index, and authored
+      core components of the sigstore timestamping infrastructure. I am also
+      interested in using static analysis methods (e.g. CodeQL) to find
+      security problems in the software supply chain and remediate them.
+    skills:
+      enable: true
+      title: "Areas of expertise:"
+      items:
+        - "Supply Chain Security"
+        - "Binary Analysis"
+        - "Reverse Engineering"
+        - "Static Analysis"
+        - "Vulnerability Detection"
+
+  experience:
+    enable: true
+    title: "Work Experience"
+    items:
+      - company: "Trail of Bits"
+        companyUrl: "https://www.trailofbits.com/"
+        jobs:
+          - name: "Security Engineer"
+            date: "Sep 2023 - Present"
+            content: |-
+              - Designed and built the RFC3161 timestamping client that
+                powers package attestations across the Python packaging
+                ecosystem (PyPI, sigstore-python, pyca/cryptography).
+              - Drove PEP 740 adoption in PyPI: attestation storage,
+                trusted publishing hardening, and publisher verification
+                for GitHub and GitLab.
+              - Discovered 7 CVEs in widely-used projects (Elasticsearch,
+                Google Protobuf, XStream, Wire) through systematic
+                analysis of recursion-based DoS patterns. Presented
+                findings at DistrictCon 2025.
+              - Built CodeQL queries and Semgrep rules to enhance static
+                analysis of codebases for security vulnerabilities.
+
+      - company: "Quarkslab"
+        companyUrl: "https://www.quarkslab.com/"
+        jobs:
+          - name: "Security Engineer"
+            date: "Oct 2018 - Dec 2022"
+            content: |-
+              Part of the Automated Analysis team, working on:
+
+              - Conducted a PhD on the detection of 1-day vulnerabilities
+                in Android phones
+              - Reverse-engineered Android applications for security audits
+              - Developed Quokka, an IDA Pro plugin for fast binary exports
+              - Created tools around the Android Open Source Project
+                for security research
+
+      - company: "ANSSI"
+        companyUrl: "https://www.ssi.gouv.fr/"
+        jobs:
+          - name: "Master Internship"
+            date: "Mar 2018 - Aug 2018"
+            content: |-
+              Developed an IDA plugin to detect usage of cryptography
+              in binary code using symbolic execution.
+
+      - company: "AXA CS"
+        companyUrl: "https://www.axa.com/"
+        jobs:
+          - name: "Apprentice in Cybersecurity"
+            date: "Sep 2015 - Aug 2016"
+            content: |-
+              Worked in the Cybersecurity Team on the implementation
+              of ISO 2700X norms.
+
+  education:
+    enable: true
+    items:
+      - title: "PhD in Binary Analysis"
+        school:
+          name: "Ecole Polytechnique"
+          url: "https://www.polytechnique.edu"
+        date: "2019 - 2022"
+      - title: "Master in Digital Security"
+        school:
+          name: "Eurecom"
+          url: "https://www.eurecom.fr"
+        date: "2016 - 2018"
+      - title: "BSc in Computer Science"
+        school:
+          name: "University Pierre & Marie Curie"
+          url: "https://www.sorbonne-universite.fr"
+        date: "2012 - 2015"
+
+  projects:
+    enable: true
+    items:
+      - title: rfc3161-client
+        content: >-
+          An opinionated RFC3161 timestamping client used in the sigstore
+          ecosystem to power package attestations in PyPI.
+        image: ""
+        badges:
+          - "Python"
+          - "Rust"
+          - "Supply Chain"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/trailofbits/rfc3161-client
+
+      - title: Quokka
+        content: >-
+          A Fast and Accurate Binary Exporter. IDA Pro plugin for
+          generating exports from arbitrary binaries.
+        image: /images/projects/quokka.png
+        badges:
+          - "Reverse Engineering"
+          - "IDA Plugin"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/quarkslab/quokka
+          - icon: fas fa-book
+            url: https://quarkslab.github.io/quokka/
+
+      - title: BGraph
+        content: >-
+          A tool to generate dependency graphs from Android.bp
+          soong files for security research.
+        image: ""
+        badges:
+          - "Binary Analysis"
+          - "Graph Theory"
+          - "Android"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/quarkslab/bgraph
+
+  achievements:
+    enable: true
+    title: "Publications"
+    items:
+      - title: "Making PyPI's test suite 81% faster"
+        content: "Trail of Bits Blog, 2025"
+        url: "https://blog.trailofbits.com/2025/05/01/making-pypis-test-suite-81-faster/"
+      - title: "Don't recurse on untrusted input"
+        content: "Trail of Bits Blog, 2025"
+        url: "https://blog.trailofbits.com/2025/02/21/dont-recurse-on-untrusted-input/"
+      - title: "Low-Effort Denial of Service with Recursion"
+        content: "DistrictCon, Washington DC, 2025"
+        url: "https://www.districtcon.org/bios-and-talks-2025/low-effort-dos-with-recursion"
+      - title: "Quokka: A Fast and Accurate Binary Exporter"
+        content: "Quarkslab Blog, 2022 / GreHack, Grenoble, 2022"
+        url: "https://blog.quarkslab.com/quokka-a-fast-and-accurate-binary-exporter.html"
+      - title: "Commit Level Vulnerability Dataset"
+        content: "Quarkslab Blog, 2022 / CODASPY, Baltimore, 2022"
+        url: "https://blog.quarkslab.com/commit-level-vulnerability-dataset.html"
+      - title: "An Experimental Study of Different Binary Exporters"
+        content: "Quarkslab Blog, 2019"
+        url: "https://blog.quarkslab.com/an-experimental-study-of-different-binary-exporters.html"
+      - title: "Towards 1-day Vulnerability Detection using Semantic Patch Signatures"
+        content: 'PhD Thesis, École Polytechnique, 2022 — <a href="https://theses.hal.science/tel-03950382" target="_blank">Manuscript</a> · <a href="/uploads/thesis-slides.pdf" target="_blank">Slides</a>'
+      - title: "Exploitation du graphe de dépendance d'AOSP"
+        content: "SSTIC, Rennes, 2021"
+        url: "https://www.sstic.org/2021/presentation/bgraph/"
+
+  disclosures:
+    enable: true
+    title: "Disclosures"
+    items:
+      - title: "CVE-2026-23896"
+        content: "Privilege Escalation in Immich (2026)"
+      - title: "CVE-2025-4565"
+        content: "Denial of Service in Google Protobuf (2025)"
+      - title: "CVE-2024-52981 / CVE-2024-52980"
+        content: "Denial of Service in Elastic (2024)"
+      - title: "CVE-2024-7254"
+        content: "Denial of Service in Google Protobuf (2024)"
+      - title: "CVE-2024-47072"
+        content: "Denial of Service in XStream (2024)"
+      - title: "RUSTSEC-2024-0437"
+        content: "Denial of Service in rust-protobuf (2024)"
+      - title: "CVE-2024-58103"
+        content: "Vulnerability in Wire (2024)"
+
+  contact:
+    enable: true
+    content: >-
+      Feel free to reach out if you have questions or just want to say hi.
+    btnName: Mail me
+    btnLink: mailto:alexis@challande.eu
+
+  footer:
+    socialNetworks:
+      github: https://github.com/DarkaMaul
+      linkedin: https://www.linkedin.com/in/alexis-challande/
+      bluesky: https://bsky.app/profile/darkamaul.bsky.social

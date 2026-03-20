@@ -1,8 +1,5 @@
-module github.com/wowchemy/starter-hugo-academic
+module github.com/darkamaul/darkamaul.github.io
 
-go 1.15
+go 1.26.1
 
-require (
-	github.com/wowchemy/wowchemy-hugo-modules/wowchemy-cms/v5 v5.0.0-20220424221502-30cbf912016f // indirect
-	github.com/wowchemy/wowchemy-hugo-modules/wowchemy/v5 v5.0.0-20220424221502-30cbf912016f // indirect
-)
+require github.com/gurusabarish/hugo-profile v0.0.0-20260208061302-ecc48c8db383 // indirect
