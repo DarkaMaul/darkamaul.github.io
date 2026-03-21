@@ -1,4 +1,4 @@
-baseURL: "https://darkamaul.github.io"
+baseURL: "https://alexis.challande.eu"
 languageCode: "en-us"
 title: "Alexis Challande"
 
@@ -30,7 +30,7 @@ menus:
 
 params:
   title: "Alexis Challande"
-  description: "Security Engineer - Personal Website"
+  description: "Alexis Challande - Security Engineer and PhD in Cybersecurity. Specializing in supply chain security, binary analysis, and vulnerability detection. Currently at Trail of Bits."
   favicon: "/fav.png"
   animate: true
   useBootstrapCDN: false

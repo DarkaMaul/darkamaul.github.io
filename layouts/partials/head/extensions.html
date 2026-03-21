@@ -1,1 +1,54 @@
 <link rel="stylesheet" href="/css/custom.css">
+
+<!-- Open Graph image -->
+<meta property="og:image" content="{{ "images/avatar.jpg" | absURL }}">
+<meta name="twitter:image" content="{{ "images/avatar.jpg" | absURL }}">
+
+<!-- JSON-LD structured data for search engines and AI agents -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Alexis Challande",
+  "url": "https://alexis.challande.eu",
+  "image": "{{ "images/avatar.jpg" | absURL }}",
+  "jobTitle": "Security Engineer",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Trail of Bits",
+    "url": "https://www.trailofbits.com/"
+  },
+  "alumniOf": [
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "École Polytechnique",
+      "url": "https://www.polytechnique.edu"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Eurecom",
+      "url": "https://www.eurecom.fr"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Sorbonne Université",
+      "url": "https://www.sorbonne-universite.fr"
+    }
+  ],
+  "knowsAbout": [
+    "Supply Chain Security",
+    "Binary Analysis",
+    "Reverse Engineering",
+    "Static Analysis",
+    "Vulnerability Detection",
+    "Cybersecurity"
+  ],
+  "sameAs": [
+    "https://github.com/DarkaMaul",
+    "https://www.linkedin.com/in/alexis-challande/",
+    "https://scholar.google.fr/citations?user=FbVm3psAAAAJ",
+    "https://bsky.app/profile/darkamaul.bsky.social"
+  ],
+  "description": "Security Engineer and PhD in Cybersecurity specializing in supply chain security, binary analysis, and vulnerability detection."
+}
+</script>
