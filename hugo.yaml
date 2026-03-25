@@ -264,6 +264,9 @@ params:
     items:
       - title: "CVE-2026-23896"
         content: "Privilege Escalation in Immich (2026)"
+      - title: "CVE-2025-33238 / CVE-2025-33254"
+        content: "Denial of Service in NVIDIA Triton Inference Server (2025)"
+        url: "https://nvidia.custhelp.com/app/answers/detail/a_id/5790"
       - title: "CVE-2025-4565"
         content: "Denial of Service in Google Protobuf (2025)"
       - title: "CVE-2024-52981 / CVE-2024-52980"
