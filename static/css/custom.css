@@ -140,21 +140,24 @@
 
 /* Uniform link styling — match theme's animated underline pattern */
 #achievements a.card,
-#publications a.card {
+#publications a.card,
+#disclosures a.card {
   display: block;
   text-decoration: none;
   color: var(--text-link-color) !important;
 }
 
 #achievements a.card .card-title,
-#publications a.card .card-title {
+#publications a.card .card-title,
+#disclosures a.card .card-title {
   display: inline-block;
   text-decoration: none;
   color: var(--text-link-color) !important;
 }
 
 #achievements a.card .card-title::after,
-#publications a.card .card-title::after {
+#publications a.card .card-title::after,
+#disclosures a.card .card-title::after {
   content: "";
   display: block;
   width: 0px;
@@ -168,19 +171,23 @@
 #achievements a.card:hover .card-title::after,
 #achievements a.card:focus .card-title::after,
 #publications a.card:hover .card-title::after,
-#publications a.card:focus .card-title::after {
+#publications a.card:focus .card-title::after,
+#disclosures a.card:hover .card-title::after,
+#disclosures a.card:focus .card-title::after {
   width: 100%;
 }
 
 #achievements a.card .card-text,
-#publications a.card .card-text {
+#publications a.card .card-text,
+#disclosures a.card .card-text {
   color: var(--text-color) !important;
   opacity: 0.9;
 }
 
 /* Inline links inside card text (e.g. Manuscript · Slides) */
 #achievements .card-text a,
-#publications .card-text a {
+#publications .card-text a,
+#disclosures .card-text a {
   display: inline-block;
   color: var(--text-link-color) !important;
   text-decoration: none;
@@ -188,7 +195,8 @@
 }
 
 #achievements .card-text a::after,
-#publications .card-text a::after {
+#publications .card-text a::after,
+#disclosures .card-text a::after {
   content: "";
   display: block;
   width: 0px;
@@ -202,7 +210,9 @@
 #achievements .card-text a:hover::after,
 #achievements .card-text a:focus::after,
 #publications .card-text a:hover::after,
-#publications .card-text a:focus::after {
+#publications .card-text a:focus::after,
+#disclosures .card-text a:hover::after,
+#disclosures .card-text a:focus::after {
   width: 100%;
 }
 
