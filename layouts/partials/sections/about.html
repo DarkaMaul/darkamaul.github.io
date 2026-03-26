@@ -1,9 +1,9 @@
 {{ if .Site.Params.about.enable | default false }}
 {{- $about := .Site.Language.Params.about | default .Site.Params.about -}}
-<section id="about" class="py-0 py-sm-5">
+<section id="about" class="pt-0 pt-sm-5 pb-0">
     <div class="container bg-transparent">
         <h3 class="text-center bg-transparent">{{ $about.title | default (i18n "about") }}</h3>
-        <div class="bg-transparent row justify-content-center px-3 py-5">
+        <div class="bg-transparent row justify-content-center px-3 pt-3 pb-0">
             {{ if .Site.Params.about.image }}
             <div class="col-sm-12 col-md-8 col-lg-4 mb-5 mb-sm-0 mb-md-5 mb-lg-0 d-none d-sm-none d-md-block">
                 <div class="image d-flex px-5">
