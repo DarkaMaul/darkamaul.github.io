@@ -262,6 +262,9 @@ params:
     enable: true
     title: "Disclosures"
     items:
+      - title: "GHSA-q729-696q-g9pq / GHSA-q8qp-67f9-wr3f"
+        content: "Denial of Service in SurrealDB (2026)"
+        url: "https://github.com/surrealdb/surrealdb/security/advisories/GHSA-q729-696q-g9pq"
       - title: "CVE-2026-23896"
         content: "Privilege Escalation in Immich (2026)"
       - title: "CVE-2025-33238 / CVE-2025-33254"
