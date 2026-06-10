@@ -229,6 +229,9 @@ params:
     enable: true
     title: "Writing"
     items:
+      - title: "We hardened zizmor's GitHub Actions static analyzer"
+        content: "Trail of Bits Blog, 2026"
+        url: "https://blog.trailofbits.com/2026/05/22/we-hardened-zizmors-github-actions-static-analyzer/"
       - title: "Making PyPI's test suite 81% faster"
         content: "Trail of Bits Blog, 2025"
         url: "https://blog.trailofbits.com/2025/05/01/making-pypis-test-suite-81-faster/"
@@ -243,6 +246,9 @@ params:
     enable: true
     title: "Talks & Publications"
     items:
+      - title: "Denial of Service using recursions: not even Rust is going to save you"
+        content: "SSTIC, Rennes, 2026"
+        url: "https://www.sstic.org/2026/presentation/dos_using_recursions_not_even_rust_is_going_to_save_you/"
       - title: "Low-Effort Denial of Service with Recursion"
         content: "DistrictCon, Washington DC, 2025"
         url: "https://www.districtcon.org/bios-and-talks-2025/low-effort-dos-with-recursion"
