@@ -246,6 +246,9 @@ params:
     enable: true
     title: "Talks & Publications"
     items:
+      - title: "Shipping post-quantum cryptography to Python"
+        content: "Trail of Bits Blog, 2026"
+        url: "https://blog.trailofbits.com/2026/06/30/shipping-post-quantum-cryptography-to-python/"
       - title: "Denial of Service using recursions: not even Rust is going to save you"
         content: "SSTIC, Rennes, 2026"
         url: "https://www.sstic.org/2026/presentation/dos_using_recursions_not_even_rust_is_going_to_save_you/"
@@ -268,6 +271,12 @@ params:
     enable: true
     title: "Disclosures"
     items:
+      - title: "GHSA-3rpf-frgx-xq34"
+        content: "Vulnerability in libevent (2026)"
+        url: "https://github.com/libevent/libevent/security/advisories/GHSA-3rpf-frgx-xq34"
+      - title: "GHSA-c2pj-cg4r-88c8"
+        content: "Dangling Pointer in libevent (2026)"
+        url: "https://github.com/libevent/libevent/security/advisories/GHSA-c2pj-cg4r-88c8"
       - title: "GHSA-q729-696q-g9pq / GHSA-q8qp-67f9-wr3f"
         content: "Denial of Service in SurrealDB (2026)"
         url: "https://github.com/surrealdb/surrealdb/security/advisories/GHSA-q729-696q-g9pq"
